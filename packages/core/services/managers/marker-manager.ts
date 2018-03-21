@@ -51,6 +51,10 @@ export class MarkerManager {
     return this._markers.get(marker).then((m: Marker) => m.setIcon(marker.iconUrl));
   }
 
+  updateRotation(marker: AgmMarker): Promise<void> {
+    return this._markers.get(marker).then((m: Marker) => m.setRotation(marker.rotation));
+  }
+
   updateOpacity(marker: AgmMarker): Promise<void> {
     return this._markers.get(marker).then((m: Marker) => m.setOpacity(marker.opacity));
   }
